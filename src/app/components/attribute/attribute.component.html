@@ -1,0 +1,30 @@
+<div>
+  <h1>Ejemplo de uso de Directiva de Atriburo</h1>
+  <br>
+  <p>
+    Sirve para cambiar el color de fondo de cualquier componente,
+  </p>
+
+  <p>
+    Al pasar el raton por encima se aplica el color y al quitar el raton se quita el color.
+  </p>
+
+
+  <div>
+    <h2>Selecciona el color para subrayar:</h2>
+    <div>
+      <input type="radio" name="colors" (click)="color='yellow'" />
+      <input type="radio" name="colors" (click)="color='blue'" />
+      <input type="radio" name="colors" (click)="color='red'" />
+    </div>
+  </div>
+
+  <div>
+    <p [appHighLight]="color"> Texto de prueba sin defaul color </p>
+  </div>
+
+  <div>
+    <p [appHighLight]="color" defaultColor="violet"> Texto de prueba con defaul color </p>
+  </div>
+</div>
+

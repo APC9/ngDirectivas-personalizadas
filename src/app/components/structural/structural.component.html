@@ -1,0 +1,28 @@
+<div>
+  <h1>Ejemplo Directiva Estructural</h1>
+  <br>
+  <p>Directiva Personalizada mas avanzada que ngIf</p>
+
+  <!--* Ejemplo con directiva con * -->
+  <br>
+
+  <p [appHighLight]="'blue'">
+    Ejemplo Basico: Contenido oculto para los que no tienen el rol
+  </p>
+
+  <!-- * Ejemplo con Directiva -->
+  <br>
+  <ng-template [appStructural]="rol">
+    <p>
+      Ejemplo con ngtemplate
+    </p>
+    <p>
+      Contenido oculto para los que no tienen el rol
+    </p>
+  </ng-template>
+
+  <div>
+    <button (click)="changeRol()"> {{ !rol ? 'Mostrar' : 'Ocultar' }}</button>
+  </div>
+
+</div>
